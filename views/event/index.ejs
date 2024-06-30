@@ -1,0 +1,12 @@
+<% layout("/layouts/boilerplate") %>
+
+    <h1>Events</h1>
+    <ul>
+        <% console.log(events) %>
+        <% events.forEach(event=> { %>
+            <li><a href="/events/<%= event._id %>">
+                    <%= event.name %>
+                </a></li>
+            <% }) %>
+    </ul>
+    <a href="/events/new">Create New Event</a>
